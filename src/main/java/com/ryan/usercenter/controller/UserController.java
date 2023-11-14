@@ -82,7 +82,6 @@ public class UserController {
 			throw new BusinessException(ErrorCode.NOT_LOGIN);
 		}
 		long id = user.getId();
-		//TODO: 校验用户是否合法
 		User userFromDB = userService.getById(id);
 		return ResultUtils.success(userService.getSafetyUser(userFromDB));
 	}
